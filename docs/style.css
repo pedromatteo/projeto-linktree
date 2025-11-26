@@ -1,9 +1,11 @@
+/* RESET */
 * { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* VARIÁVEIS GLOBAIS */
 :root {
   --text-color: white;
   --bg-url: url(assets/bg-mobile.jpg);
@@ -14,6 +16,7 @@
   --switch-bg-url: url(assets/moon-stars.svg);
 }
 
+/* MODO CLARO */
 .light {
   --text-color: black;
   --bg-url: url(assets/bg-mobile-light.jpg);
@@ -24,23 +27,21 @@
   --switch-bg-url: url(assets/sun.svg);
 }
 
+/* BODY */
 body {
   background: var(--bg-url) no-repeat top center/cover;
-}
-
-body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
+/* CONTAINER CENTRAL */
 #container {
   width: 360px;
   margin: 56px auto 0px;
   padding: 0 24px;
 }
 
-/* profile */
-
+/* PERFIL */
 #profile {
   text-align: center;
   padding: 24px;
@@ -48,6 +49,7 @@ body * {
 
 #profile img {
   width: 112px;
+  border-radius: 50%;
 }
 
 #profile p {
@@ -56,12 +58,10 @@ body * {
   margin-top: 8px;
 }
 
-/*switch*/
-
+/* SWITCH MODO CLARO/ESCUDO */
 #switch {
   position: relative;
   width: 64px;
-
   margin: 4px auto;
 }
 
@@ -71,12 +71,12 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-  
   position: absolute;
   top: 50%;
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .light #switch button {
@@ -95,7 +95,7 @@ body * {
   border-radius: 9999px;
 }
 
-/* Links */
+/* LINKS */
 ul {
   list-style: none;
   display: flex;
@@ -108,32 +108,26 @@ ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 16px 24px;
-  
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.2s;
+  transition: background 0.2s, border 0.2s;
 }
 
-/* pseudo selector */
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
-/* social links */
+/* ÍCONES SOCIAIS */
 #social-links {
   display: flex;
   justify-content: center;
-
   padding: 24px 0;
   font-size: 24px;
 }
@@ -143,7 +137,6 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
-
   transition: background 0.2s;
   border-radius: 50%;
 }
@@ -152,6 +145,7 @@ ul li a:hover {
   background: var(--highlight-color);
 }
 
+/* FOOTER */
 footer {
   padding: 24px 0; 
   text-align: center;
